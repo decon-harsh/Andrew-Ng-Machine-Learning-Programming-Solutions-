@@ -7,9 +7,9 @@
 m = length(y); % number of training examples
 J_history = zeros(num_iters, 1);
 
-for iter = 1:num_iters
-  error=(X*theta)-y;
-  theta=theta-(alpha/m)*(sum(error.*X))';
+for iter = 1:num_iters     %for loop for all iterations
+  error=(X*theta)-y;       %calculating error of predictions
+  theta=theta-(alpha/m)*(sum(error.*X))'; %gradient descent algo
 
   
   
@@ -33,6 +33,6 @@ for iter = 1:num_iters
     % Save the cost J in every iteration    
     J_history(iter) = computeCost(X, y, theta);
 
-end
+end %end of for loop
 
 end
