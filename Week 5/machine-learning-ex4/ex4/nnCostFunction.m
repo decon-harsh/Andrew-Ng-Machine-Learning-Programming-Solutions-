@@ -59,10 +59,8 @@ y_vector= (1:num_labels)==y;
 %because this is a vectorise implementation of the seconf summation thing in cost function 
 %summation 1 to k can be reduced by element wise wise operations on this y_vector
 
-%Cost function without regularization
-J=  (1/m)*sum(sum(-y_vector.*log(h)-(1-y_vector).*log(1-h)));
-%adding regularization;
-J=J+((lambda)/(2*m))*((sum(sum(Theta1(:,2:end).^2)))+(sum(sum(Theta2(:,2:end).^2))));
+%Cost function
+
 
 
 % Part 2: Implement the backpropagation algorithm to compute the gradients
